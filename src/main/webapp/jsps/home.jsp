@@ -1,54 +1,34 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.net.*" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>MithunTechnologies- Home Page</title>
-<link href="images/mithunlogo.jpg" rel="icon">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamCity Overview</title>
 </head>
 <body>
-<h1 align="center">Welcome to Mithun Software Solutions. Bengaluru,Karnataka </h1>
-<h1 align="center"> Mithun Software Solutions- Very Good Training center for DevOps with AWS in Maratha Halli Bangalore India and also for Job Assitance Job Support also...Teaching Real Time scnerios</h1>
-<hr>
-<br>
-	<h1><h3> Server Side IP Address </h3><br>
+    <h1 align="center">Learning TeamCity for CI/CD</h1>
 
-<% 
-String ip = "";
-InetAddress inetAddress = InetAddress.getLocalHost();
-ip = inetAddress.getHostAddress();
-out.println("Server Host Name :: "+inetAddress.getHostName()); 
-%>
-<br>
-<%out.println("Server IP Address :: "+ip);%>
-</h1>
-<br>
-<h1><h3> Client Side IP Address </h3><br>
-<%out.print( "Client IP Address :: " + request.getRemoteAddr() ); %><br>
-<%out.print( "Client Name Host :: "+ request.getRemoteHost() );%><br></h1>
-<hr>
-<div style="text-align: center;">
-	<span>
-		<img src="images/mithunlogo.jpg" alt="" width="100">
-	</span>
-	<span style="font-weight: bold;">
-		Mithun Technologies, 
-		Martha Halli, Above ICICI Bank, Beside Meghana Foods,
-		Bangalore,
-		+91-9980923226
-		devopstrainingblr@gmail.com
-		<br>
-		<a href="mailto:devopstrainingblr@gmail.com">Mail to Mithun Technologies</a>
-	</span>
-</div>
-<hr>
-	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
-<hr>
-<hr>
-<p align=center>Mithun Technologies - Consultant, Training, Development Center.</p>
-<p align=center><small>Copyrights 2022 by <a href="http://mithuntechnologies.com/">Mithun Technologies,Bengaluru</a> </small></p>
+    <p><strong>TeamCity</strong> is a powerful continuous integration and delivery server developed by JetBrains. It helps automate the process of building, testing, and deploying applications with great flexibility and deep integration support.</p>
 
+    <h2>Key Features of TeamCity:</h2>
+    <ul>
+        <li>Supports build pipelines with build chains and dependencies.</li>
+        <li>Integrates with Git, GitHub, Bitbucket, and other version control systems.</li>
+        <li>Provides a web-based UI for build configuration and monitoring.</li>
+        <li>Supports parallel and distributed builds using build agents.</li>
+        <li>Offers plugin support and REST API for custom integration.</li>
+    </ul>
+
+    <h2>Basic Learning Steps:</h2>
+    <ol>
+        <li>Install TeamCity server and build agent (either on-prem or via Docker).</li>
+        <li>Connect your version control system (e.g., GitHub).</li>
+        <li>Create a project and define build steps (e.g., Maven, Gradle, Shell script).</li>
+        <li>Set up triggers for automatic builds (on commit, schedule, etc.).</li>
+        <li>Analyze build results, logs, and test reports through the UI.</li>
+    </ol>
+
+    <p>TeamCity is ideal for teams looking for a flexible, enterprise-grade CI/CD tool with strong customization and visibility features.</p>
 </body>
 </html>
+
