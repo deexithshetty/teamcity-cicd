@@ -1,0 +1,14 @@
+- name: Dummy Playbook with Hardcoded Password
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create a dummy user with hardcoded password (bad practice)
+      user:
+        name: dummyuser
+        password: "MyHardCodedPassword123!"  
+        state: present
+
+    - name: Display completion message
+    debug:
+        msg: "User created successfully"
+
