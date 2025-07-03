@@ -1,0 +1,29 @@
+- name: Dummy Playbook for Coderabbit Review
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install apache2
+      apt:
+        name: apache2
+        state: present
+        update_cache: true
+
+    - name: Unused task with duplicate name
+      apt:
+        name: apache2
+        state: present
+
+    - name: Hardcoded path (bad practice)
+      shell: "cat /etc/passwd > /tmp/passwd_backup"
+
+    - name: Use debug instead of proper logging
+      debug:
+        msg: "This is a test debug message"
+
+    - name: Inefficient loop example
+      shell: "echo {{ item }}"
+      loop:
+        - One
+        - Two
+        - Three
+
